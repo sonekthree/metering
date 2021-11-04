@@ -67,9 +67,7 @@ public class ClassDB {
         return class_perhour;
     }
 
-    public int getClass_price() {
-        return class_price;
-    }
+    public int getClass_price() { return class_price; }
 
     public String getClass_schedule() {
         return class_schedule;
