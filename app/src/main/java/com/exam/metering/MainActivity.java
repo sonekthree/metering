@@ -1,11 +1,13 @@
 package com.exam.metering;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -16,6 +18,16 @@ public class MainActivity extends AppCompatActivity {
     Fragment fragment_match;
     Fragment fragment_search;
     Fragment fragment_my;
+    ViewPager2 viewPager2;
+    private Handler sliderHandler = new Handler();
+
+    private Runnable sliderRunnable = new Runnable() {
+        @Override
+        public void run() {
+            viewPager2.setCurrentItem(viewPager2.getCurrentItem() + 1);
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,23 +53,26 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.item_homePage:
-                        getSupportFragmentManager().beginTransaction() .replace(R.id.main_layout,fragment_home).commitAllowingStateLoss();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.main_layout, fragment_home).commitAllowingStateLoss();
                         return true;
                     case R.id.item_matchPage:
-                        getSupportFragmentManager().beginTransaction() .replace(R.id.main_layout,fragment_match).commitAllowingStateLoss();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.main_layout, fragment_match).commitAllowingStateLoss();
                         return true;
                     case R.id.item_searchPage:
-                        getSupportFragmentManager().beginTransaction() .replace(R.id.main_layout,fragment_search).commitAllowingStateLoss();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.main_layout, fragment_search).commitAllowingStateLoss();
                         return true;
                     case R.id.item_myPage:
-                        getSupportFragmentManager().beginTransaction() .replace(R.id.main_layout,fragment_my).commitAllowingStateLoss();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.main_layout, fragment_my).commitAllowingStateLoss();
                         return true;
                 }
                 return true;
             }
         });
 
+
     }
+
+
 }
