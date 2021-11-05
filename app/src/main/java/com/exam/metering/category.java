@@ -9,6 +9,7 @@ public class category extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_category);
+  //      ActivityCategoryBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_category);
+
     }
 }
