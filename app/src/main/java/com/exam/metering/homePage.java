@@ -1,5 +1,6 @@
 package com.exam.metering;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -7,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -17,6 +19,12 @@ import java.util.ArrayList;
 public class homePage extends Fragment {
 
     ViewPager2 viewPager2;
+    ImageButton natureButton;
+    ImageButton socialButton;
+    ImageButton artButton;
+    ImageButton lanButton;
+    ImageButton button;
+    ImageButton engineButton;
     Button btnToggle;
     private Handler sliderHandler = new Handler();
     boolean flag = true;
@@ -51,6 +59,16 @@ public class homePage extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         viewPager2 = view.findViewById(R.id.viewPager2);
+        // 버튼 뷰와 연결
+        natureButton = view.findViewById(R.id.nature_button);
+        natureButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), category.class);
+                startActivity(intent);
+            }
+        });
+
 
         ArrayList<DataPage> list = new ArrayList<>();
         list.add(new DataPage(android.R.color.black,"1 Page"));
