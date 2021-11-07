@@ -1,14 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".searchPage">
+    tools:context=".LoginActivity"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
+
+
+    <EditText
+        android:id="@+id/search_title"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="85dp"
+        android:background="@drawable/edit_text_shape"
+        android:drawablePadding="10dp"
+        android:hint="제목 또는 이름"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:textColor="@color/mint"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+
+    <ImageView
+        android:id="@+id/dateimg"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:src="@drawable/edit_text_shape"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/search_title"
+        app:layout_constraintTop_toBottomOf="@+id/search_title"
+        app:layout_constraintVertical_chainStyle="packed"
+
+    />
+
+    <ImageView
+        android:id="@+id/startcal"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/ic_baseline_event_note_24"
+        app:layout_constraintStart_toStartOf="@+id/dateimg"
+        app:layout_constraintTop_toTopOf="@+id/dateimg"
+        app:layout_constraintBottom_toBottomOf="@+id/dateimg"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+    <Button
+        android:id="@+id/startDate_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="강의 시작일"
+        android:textSize="14sp"
+        android:layout_marginTop="21dp"
+        android:background="#00ff0000"
+        app:layout_constraintStart_toEndOf="@+id/startcal"
+        app:layout_constraintTop_toBottomOf="@+id/search_title"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="searchpage" />
+        android:id="@+id/during"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" ~ "
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/startDate_btn"
+        app:layout_constraintTop_toTopOf="@+id/dateimg"
+        app:layout_constraintBottom_toBottomOf="@+id/dateimg"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/endcal"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_baseline_event_note_24"
+        app:layout_constraintStart_toEndOf="@+id/during"
+        app:layout_constraintTop_toTopOf="@+id/dateimg"
+        app:layout_constraintBottom_toBottomOf="@+id/dateimg"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+
+    <Button
+        android:id="@+id/endDate_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="강의 종료일"
+        android:textSize="14sp"
+        android:layout_marginTop="21dp"
+        android:background="#00ff0000"
+        app:layout_constraintStart_toEndOf="@+id/endcal"
+        app:layout_constraintTop_toBottomOf="@+id/search_title"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <Spinner
+        android:id="@+id/spinner_met"
+        android:spinnerMode="dialog"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/spinner_shape"
+        android:padding="8dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@id/search_title"
+        app:layout_constraintTop_toBottomOf="@id/search_title"/>
+
+    <ImageView
+        android:id="@+id/priceimg"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:src="@drawable/edit_text_shape"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/search_title"
+        app:layout_constraintTop_toBottomOf="@+id/dateimg"
+        app:layout_constraintVertical_chainStyle="packed"
+
+        />
+
+    <EditText
+        android:id="@+id/minPrice"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="30dp"
+        android:gravity="right"
+        android:src="@drawable/ic_baseline_event_note_24"
+        app:layout_constraintStart_toStartOf="@+id/priceimg"
+        app:layout_constraintTop_toTopOf="@+id/priceimg"
+        app:layout_constraintBottom_toBottomOf="@+id/priceimg"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
