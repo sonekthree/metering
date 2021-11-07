@@ -1,15 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
     tools:context=".homePage">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="home" />
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginBottom="10sp"
+            android:text="인기클래스"
+        />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_weight="16"
+            android:layout_gravity="center"
+            android:id="@+id/viewPager2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"/>
+
+    </LinearLayout>
+    <!--
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:layout_marginBottom="10dp"
+            -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="클래스 카테고리" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="16"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="16"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:id="@+id/nature_button"
+                    android:layout_gravity="top"
+                    android:layout_width="50sp"
+                    android:layout_height="100sp"
+                    android:background="@drawable/ic_baseline_home_24"
+                    android:layout_weight="1"
+                    android:text="nature" />
+
+                <ImageButton
+                    android:id="@+id/social_button"
+                    android:layout_gravity="top"
+                    android:layout_width="50sp"
+                    android:layout_height="100sp"
+                    android:background="@drawable/ic_baseline_home_24"
+                    android:layout_weight="1"
+                    android:text="social" />
+                <ImageButton
+                    android:id="@+id/art_button"
+                    android:layout_gravity="top"
+                    android:layout_width="50sp"
+                    android:layout_height="100sp"
+                    android:background="@drawable/ic_baseline_home_24"
+                    android:layout_weight="1"
+                    android:text="art" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="16"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:id="@+id/lan_button"
+                    android:layout_gravity="top"
+                    android:layout_width="50sp"
+                    android:layout_height="100sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_baseline_home_24"
+                    android:text="lan" />
+                <ImageButton
+                    android:id="@+id/button"
+                    android:layout_gravity="top"
+                    android:layout_width="50sp"
+                    android:layout_height="100sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_baseline_home_24"
+                    android:text="View 1" />
+                <ImageButton
+                    android:id="@+id/engine_button"
+
+                    android:layout_width="50sp"
+                    android:layout_height="100sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_baseline_home_24"
+                    android:text="Engine" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
 
 
-</FrameLayout>
+
+</LinearLayout>
