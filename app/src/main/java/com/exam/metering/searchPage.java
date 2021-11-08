@@ -2,12 +2,14 @@ package com.exam.metering;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 import androidx.annotation.Nullable;
@@ -51,9 +53,11 @@ public class searchPage extends Fragment{
             }
         });
 
+        EditText et = (EditText) v.findViewById(R.id.lecCount_edit);
+        et.setFilters(new InputFilter[]{ new LecCountMinMax(0, 30)});
 
         arrayAdapter = new ArrayAdapter<>(getActivity(),
-                android.R.layout.simple_spinner_dropdown_item, arr);
+                R.layout.lec_met_text, arr);
 
         spinner = (Spinner)v.findViewById(R.id.spinner_met);
         spinner.setAdapter(arrayAdapter);

@@ -24,7 +24,7 @@
         android:paddingHorizontal="20dp"
         android:paddingVertical="10dp"
         android:textColor="@color/mint"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -48,7 +48,7 @@
         android:id="@+id/startcal"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="25dp"
         android:src="@drawable/ic_baseline_event_note_24"
         app:layout_constraintStart_toStartOf="@+id/dateimg"
         app:layout_constraintTop_toTopOf="@+id/dateimg"
@@ -85,6 +85,7 @@
         android:id="@+id/endcal"
         android:layout_width="20dp"
         android:layout_height="20dp"
+        android:layout_marginStart = "10dp"
         android:src="@drawable/ic_baseline_event_note_24"
         app:layout_constraintStart_toEndOf="@+id/during"
         app:layout_constraintTop_toTopOf="@+id/dateimg"
@@ -133,15 +134,140 @@
 
     <EditText
         android:id="@+id/minPrice"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="30dp"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
         android:gravity="right"
+        android:textSize="18sp"
+        android:drawablePadding="10dp"
+        android:hint="최소 가격"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:background="@null"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:textColor="@color/mint"
         android:src="@drawable/ic_baseline_event_note_24"
+        android:layout_marginTop="1dp"
         app:layout_constraintStart_toStartOf="@+id/priceimg"
         app:layout_constraintTop_toTopOf="@+id/priceimg"
         app:layout_constraintBottom_toBottomOf="@+id/priceimg"
         app:layout_constraintVertical_chainStyle="packed"
         />
+
+    <TextView
+        android:id="@+id/min_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="원"
+        android:textSize="18sp"
+        android:layout_marginStart="100dp"
+        app:layout_constraintStart_toStartOf="@id/minPrice"
+        app:layout_constraintTop_toTopOf="@+id/priceimg"
+        app:layout_constraintBottom_toBottomOf="@+id/priceimg"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+    <TextView
+        android:id="@+id/price_during"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" ~ "
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/min_unit"
+        app:layout_constraintTop_toTopOf="@+id/priceimg"
+        app:layout_constraintBottom_toBottomOf="@+id/priceimg"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+    <EditText
+        android:id="@+id/maxPrice"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:textSize="18sp"
+        android:drawablePadding="10dp"
+        android:hint="최대 가격"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:background="@null"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:textColor="@color/mint"
+        android:src="@drawable/ic_baseline_event_note_24"
+        android:layout_marginTop="1dp"
+        app:layout_constraintStart_toEndOf="@+id/price_during"
+        app:layout_constraintTop_toTopOf="@+id/priceimg"
+        app:layout_constraintBottom_toBottomOf="@+id/priceimg"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+    <TextView
+        android:id="@+id/max_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="원"
+        android:textSize="18sp"
+        android:layout_marginStart="100dp"
+        app:layout_constraintStart_toStartOf="@id/maxPrice"
+        app:layout_constraintTop_toTopOf="@+id/priceimg"
+        app:layout_constraintBottom_toBottomOf="@+id/priceimg"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+    <EditText
+        android:id="@+id/lecCount_edit"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_text_shape"
+        android:drawablePadding="10dp"
+        android:hint="횟수"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:textColor="@color/mint"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/search_title"
+        app:layout_constraintTop_toBottomOf="@id/spinner_met"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+    <Button
+        android:id="@+id/search_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_12"
+        android:text="검색"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/lecCount_edit"
+        app:layout_constraintTop_toBottomOf="@+id/lecCount_edit" />
+
+    <TextView
+        android:id="@+id/search_result_str"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="검색결과"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#096975"
+        app:layout_constraintTop_toBottomOf="@+id/search_btn"
+        app:layout_constraintStart_toStartOf="@id/priceimg"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mRecyclerView"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_result_str" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
