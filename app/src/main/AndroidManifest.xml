@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Metering">
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".profileEditActivity"></activity>
+        <activity android:name=".LoginActivity" />
         <activity android:name=".category" />
         <activity android:name=".MainActivity" />
         <activity
