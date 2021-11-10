@@ -19,7 +19,7 @@ public interface UserTagDAO {
     void updateUserTag(UserTag userTag);
 
     @Delete
-    void deleteUserTag(long userTagId);
+    void deleteUserTag(UserTag userTag);
 
     @Query("SELECT * FROM UserTag")
     List<UserTag> getUserTagList();

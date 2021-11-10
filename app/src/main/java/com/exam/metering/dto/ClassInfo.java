@@ -5,8 +5,6 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 public class ClassInfo implements Serializable {
@@ -22,15 +20,11 @@ public class ClassInfo implements Serializable {
     @ColumnInfo(name="class_percount") int classPerCount;
     @ColumnInfo(name="class_price") int classPrice;
     @ColumnInfo(name="class_plan") String classPlan;
-    @ColumnInfo(name="class_schedule") String[] ClassSchedule;
-
-    CategoryInfo categoryInfo;
-    UserInfo userInfo;
-    List<ClassReview> classReviewList = new ArrayList<ClassReview>();
+    @ColumnInfo(name="class_schedule") String ClassSchedule;
 
     public ClassInfo() { }
 
-    public ClassInfo(long classId, long categoryId, long userId, String className, String classType, int classMNum, byte[] classImg, int classPerHour, int classWeek, int classPerCount, int classPrice, String classPlan, String[] classSchedule) {
+    public ClassInfo(long classId, long categoryId, long userId, String className, String classType, int classMNum, byte[] classImg, int classPerHour, int classWeek, int classPerCount, int classPrice, String classPlan, String classSchedule) {
         this.classId = classId;
         this.categoryId = categoryId;
         this.userId = userId;
@@ -82,15 +76,6 @@ public class ClassInfo implements Serializable {
     public String getClassPlan() { return classPlan; }
     public void setClassPlan(String classPlan) { this.classPlan = classPlan; }
 
-    public String[] getClassSchedule() { return ClassSchedule; }
-    public void setClassSchedule(String[] classSchedule) { ClassSchedule = classSchedule; }
-
-    public CategoryInfo getCategoryInfo() { return categoryInfo; }
-    public void setCategoryInfo(CategoryInfo categoryInfo) { this.categoryInfo = categoryInfo; }
-
-    public UserInfo getUserInfo() { return userInfo; }
-    public void setUserInfo(UserInfo userInfo) { this.userInfo = userInfo; }
-
-    public List<ClassReview> getClassReviewList() { return classReviewList; }
-    public void setClassReviewList(List<ClassReview> classReviewList) { this.classReviewList = classReviewList; }
+    public String getClassSchedule() { return ClassSchedule; }
+    public void setClassSchedule(String classSchedule) { ClassSchedule = classSchedule; }
 }

@@ -19,6 +19,8 @@ public class UserTag implements Serializable {
     }
 
     public long getUserTagId() { return userTagId; }
+    public void setUserTagId(long userTagId) { this.userTagId = userTagId; }
 
     public String getUserTagName() { return userTagName; }
+    public void setUserTagName(String userTagName) { this.userTagName = userTagName; }
 }

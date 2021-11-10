@@ -19,7 +19,7 @@ public interface ClassInfoDAO {
     void updateClassInfo(ClassInfo classInfo);
 
     @Delete
-    void deleteClassInfo(long classId);
+    void deleteClassInfo(ClassInfo classInfo);
 
     @Query("SELECT * FROM ClassInfo")
     List<ClassInfo> getClassInfoList();

@@ -19,7 +19,7 @@ public interface ApplicationDAO {
     void updateApplication(Application application);
 
     @Delete
-    void deleteApplication(long appliId);
+    void deleteApplication(Application application);
 
     @Query("SELECT * FROM Application")
     List<Application> getApplicationList();

@@ -19,7 +19,7 @@ public interface UserInfoDAO {
     void updateUserInfo(UserInfo userInfo);
 
     @Delete
-    void deleteUserInfo(long userId);
+    void deleteUserInfo(UserInfo userInfo);
 
     @Query("SELECT * FROM UserInfo")
     List<UserInfo> getUserInfoList();

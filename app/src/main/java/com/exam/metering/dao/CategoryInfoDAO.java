@@ -19,7 +19,7 @@ public interface CategoryInfoDAO {
     void updateCategoryInfo(CategoryInfo categoryInfo);
 
     @Delete
-    void deleteCategoryInfo(long categoryId);
+    void deleteCategoryInfo(CategoryInfo categoryInfo);
 
     @Query("SELECT * FROM CategoryInfo")
     List<CategoryInfo> getCategoryInfoList();

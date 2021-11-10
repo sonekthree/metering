@@ -19,7 +19,7 @@ public interface ClassTagDAO {
     void updateClassTag(ClassTag classTag);
 
     @Delete
-    void deleteClassTag(long classTagId);
+    void deleteClassTag(ClassTag classTag);
 
     @Query("SELECT * FROM ClassTag")
     List<ClassTag> getClassTagList();

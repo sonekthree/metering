@@ -12,8 +12,6 @@ public class ClassReviewTag implements Serializable {
     @ColumnInfo(name = "classreview_id") long classReviewId;
     @ColumnInfo(name = "classtag_id") long classTagId;
 
-    ClassTag classTag;
-
     public ClassReviewTag() { }
 
     public ClassReviewTag(long classReviewTagId, long classReviewId, long classTagId) {
@@ -31,7 +29,4 @@ public class ClassReviewTag implements Serializable {
 
     public long getClassTagId() { return classTagId; }
     public void setClassTagId(long classTagId) { this.classTagId = classTagId; }
-
-    public ClassTag getClassTag() { return classTag; }
-    public void setClassTag(ClassTag classTag) { this.classTag = classTag; }
 }

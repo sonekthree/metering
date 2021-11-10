@@ -5,9 +5,6 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 @Entity
 public class UserInfo implements Serializable {
@@ -17,7 +14,7 @@ public class UserInfo implements Serializable {
     @ColumnInfo(name="nick_name") String nickName;
     @ColumnInfo(name="email") String email;
     @ColumnInfo(name="phone") String phone;
-    @ColumnInfo(name="birthday") Date birthday;
+    @ColumnInfo(name="birthday") String birthday;
     @ColumnInfo(name="picture") byte[] picture;
     @ColumnInfo(name="sex") String sex;
     @ColumnInfo(name="school") String school;
@@ -26,15 +23,9 @@ public class UserInfo implements Serializable {
     @ColumnInfo(name="cert_score") byte[] certScore;
     @ColumnInfo(name="introduction") String introduction;
 
-    List<Payment> paymentList = new ArrayList<Payment>();
-    List<ClassInfo> classInfoList = new ArrayList<ClassInfo>();
-    List<Application> applicationList = new ArrayList<Application>();
-    List<UserReview> userReviewList = new ArrayList<UserReview>();
-    List<ClassReview> classReviewList = new ArrayList<ClassReview>();
-
     public UserInfo() { }
 
-    public UserInfo(long userId, String pw, String userName, String nickName, String email, String phone, Date birthday, byte[] picture, String sex, String school, String major, byte[] certSchool, byte[] certScore, String introduction) {
+    public UserInfo(long userId, String pw, String userName, String nickName, String email, String phone, String birthday, byte[] picture, String sex, String school, String major, byte[] certSchool, byte[] certScore, String introduction) {
         this.userId = userId;
         this.pw = pw;
         this.userName = userName;
@@ -69,8 +60,8 @@ public class UserInfo implements Serializable {
     public String getPhone() { return phone; }
     public void setPhone(String phone) { this.phone = phone; }
 
-    public Date getBirthday() { return birthday; }
-    public void setBirthday(Date birthday) { this.birthday = birthday; }
+    public String getBirthday() { return birthday; }
+    public void setBirthday(String birthday) { this.birthday = birthday; }
 
     public byte[] getPicture() { return picture; }
     public void setPicture(byte[] picture) { this.picture = picture; }
@@ -92,19 +83,4 @@ public class UserInfo implements Serializable {
 
     public String getIntroduction() { return introduction; }
     public void setIntroduction(String introduction) { this.introduction = introduction; }
-
-    public List<Payment> getPaymentList() { return paymentList; }
-    public void setPaymentList(List<Payment> paymentList) { this.paymentList = paymentList; }
-
-    public List<ClassInfo> getClassInfoList() { return classInfoList; }
-    public void setClassInfoList(List<ClassInfo> classInfoList) { this.classInfoList = classInfoList; }
-
-    public List<Application> getApplicationList() { return applicationList; }
-    public void setApplicationList(List<Application> applicationList) { this.applicationList = applicationList; }
-
-    public List<UserReview> getUserReviewList() { return userReviewList; }
-    public void setUserReviewList(List<UserReview> userReviewList) { this.userReviewList = userReviewList; }
-
-    public List<ClassReview> getClassReviewList() { return classReviewList; }
-    public void setClassReviewList(List<ClassReview> classReviewList) { this.classReviewList = classReviewList; }
 }
