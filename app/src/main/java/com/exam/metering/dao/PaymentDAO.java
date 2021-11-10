@@ -19,7 +19,7 @@ public interface PaymentDAO {
     void updatePayment(Payment payment);
 
     @Delete
-    void deletePayment(long paymentId);
+    void deletePayment(Payment payment);
 
     @Query("SELECT * FROM Payment")
     List<Payment> getPaymentList();

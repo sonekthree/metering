@@ -19,7 +19,7 @@ public interface UserReviewTagDAO {
     void updateUserReviewTag(UserReviewTag userReviewTag);
 
     @Delete
-    void deleteUserReviewTag(long userReviewTagId);
+    void deleteUserReviewTag(UserReviewTag userReviewTag);
 
     @Query("SELECT * FROM UserReviewTag")
     List<UserReviewTag> getUserReviewTagList();

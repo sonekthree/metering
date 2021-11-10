@@ -5,8 +5,6 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 public class ClassReview implements Serializable {
@@ -15,8 +13,6 @@ public class ClassReview implements Serializable {
     @ColumnInfo(name = "user_id") long userId;
     @ColumnInfo(name = "review_rating") int reviewRating;
     @ColumnInfo(name = "review_content") String reviewContent;
-
-    List<ClassReviewTag> classReviewTagList = new ArrayList<ClassReviewTag>();
 
     public ClassReview() { }
 
@@ -42,7 +38,4 @@ public class ClassReview implements Serializable {
 
     public String getReviewContent() { return reviewContent; }
     public void setReviewContent(String reviewContent) { this.reviewContent = reviewContent; }
-
-    public List<ClassReviewTag> getClassReviewTagList() { return classReviewTagList; }
-    public void setClassReviewTagList(List<ClassReviewTag> classReviewTagList) { this.classReviewTagList = classReviewTagList; }
 }
