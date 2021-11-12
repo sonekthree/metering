@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase;
 import com.exam.metering.dao.UserReviewDAO;
 import com.exam.metering.dto.UserReview;
 
-@Database(entities = {UserReview.class}, version = 1)
+@Database(entities = {UserReview.class}, version = 1,exportSchema = false)
 public abstract class UserReviewDB extends RoomDatabase {
     private static UserReviewDB INSTANCE = null;
     public abstract UserReviewDAO userReviewDAO();

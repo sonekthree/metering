@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase;
 import com.exam.metering.dao.CategoryInfoDAO;
 import com.exam.metering.dto.CategoryInfo;
 
-@Database(entities = {CategoryInfo.class}, version = 1)
+@Database(entities = {CategoryInfo.class}, version = 1,exportSchema = false)
 public abstract class CategoryInfoDB extends RoomDatabase {
     private static CategoryInfoDB INSTANCE = null;
     public abstract CategoryInfoDAO categoryInfoDAO();

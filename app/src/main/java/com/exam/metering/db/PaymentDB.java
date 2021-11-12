@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase;
 import com.exam.metering.dao.PaymentDAO;
 import com.exam.metering.dto.Payment;
 
-@Database(entities = {Payment.class}, version = 1)
+@Database(entities = {Payment.class}, version = 1,exportSchema = false)
 public abstract class PaymentDB extends RoomDatabase {
     private static PaymentDB INSTANCE = null;
     public abstract PaymentDAO paymentDAO();
