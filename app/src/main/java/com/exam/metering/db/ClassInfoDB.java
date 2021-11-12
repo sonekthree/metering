@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase;
 import com.exam.metering.dao.ClassInfoDAO;
 import com.exam.metering.dto.ClassInfo;
 
-@Database(entities = {ClassInfo.class}, version = 1)
+@Database(entities = {ClassInfo.class}, version = 1,exportSchema = false)
 public abstract class ClassInfoDB extends RoomDatabase {
     private static ClassInfoDB INSTANCE = null;
     public abstract ClassInfoDAO classInfoDAO();

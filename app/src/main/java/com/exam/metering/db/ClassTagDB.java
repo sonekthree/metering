@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase;
 import com.exam.metering.dao.ClassTagDAO;
 import com.exam.metering.dto.ClassTag;
 
-@Database(entities = {ClassTag.class}, version = 1)
+@Database(entities = {ClassTag.class}, version = 1,exportSchema = false)
 public abstract class ClassTagDB extends RoomDatabase {
     private static ClassTagDB INSTANCE = null;
     public abstract ClassTagDAO classTagDAO();

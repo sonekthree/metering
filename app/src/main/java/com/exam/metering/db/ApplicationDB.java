@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase;
 import com.exam.metering.dao.ApplicationDAO;
 import com.exam.metering.dto.Application;
 
-@Database(entities = {Application.class}, version = 1)
+@Database(entities = {Application.class}, version = 1,exportSchema = false)
 public abstract class ApplicationDB extends RoomDatabase {
     private static ApplicationDB INSTANCE = null;
     public abstract ApplicationDAO applicationDAO();

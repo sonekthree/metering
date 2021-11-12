@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase;
 import com.exam.metering.dao.ClassReviewDAO;
 import com.exam.metering.dto.ClassReview;
 
-@Database(entities = {ClassReview.class}, version = 1)
+@Database(entities = {ClassReview.class}, version = 1,exportSchema = false)
 public abstract class ClassReviewDB extends RoomDatabase {
     private static ClassReviewDB INSTANCE = null;
     public abstract ClassReviewDAO classReviewDAO();
