@@ -1,14 +1,13 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
 android {
     compileSdkVersion 31
     buildToolsVersion "30.0.3"
 
-//    buildFeatures {
-//        dataBinding=true
-//    }
+
     defaultConfig {
         applicationId "com.exam.metering"
         minSdkVersion 29
@@ -25,6 +24,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -32,6 +32,11 @@ android {
 }
 
 dependencies {
+
+    // firebase
+    implementation platform('com.google.firebase:firebase-bom:29.0.0')
+    implementation 'com.google.firebase:firebase-auth'
+
     // recyclerview
     implementation("androidx.recyclerview:recyclerview:1.2.1")
     // For control over item selection of both touch and mouse driven selection

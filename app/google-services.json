@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1087647022860",
+    "project_id": "metering-373b6",
+    "storage_bucket": "metering-373b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1087647022860:android:3709916ae31cdffc519329",
+        "android_client_info": {
+          "package_name": "com.exam.metering"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1087647022860-noj0u74u5gdispah6prb9pp4d50r1ns8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAffN90dD0tvGZu4IR4DSidebb2yIbK0eM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1087647022860-noj0u74u5gdispah6prb9pp4d50r1ns8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
