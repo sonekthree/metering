@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".viewClassActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/class_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/class_img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/round_corner"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/test"
+            android:clipToOutline="true"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/class_cnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="1010"
+            android:textColor="@color/mint"
+            app:layout_constraintTop_toBottomOf="@id/class_img"
+            app:layout_constraintStart_toStartOf="@id/class_img"
+            />
+
+        <TextView
+            android:id="@+id/class_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="비대면"
+            android:textColor="#7A7A7A"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/class_cnt"
+            app:layout_constraintStart_toStartOf="@id/class_cnt"
+            />
+
+        <!--
+        <Button
+            android:id="@+id/class_sc"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.3"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@color/mint"
+            android:text="완료"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/class_info"/>
+
+        <Button
+            android:id="@+id/class_ca"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@color/mint"
+            android:text="e"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:orientation="horizontal"
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintLeft_toRightOf="@id/class_sc"
+            app:layout_constraintTop_toBottomOf="@id/class_info"/>
+
+        <Button
+            android:id="@+id/class_re"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@color/mint"
+            android:text="e"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:orientation="horizontal"
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintLeft_toRightOf="@id/class_ca"
+            app:layout_constraintTop_toBottomOf="@id/class_info"/>
+        -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/class_detail">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/plan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수업계획"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/sca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="스케줄"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="리뷰"/>
+    </com.google.android.material.tabs.TabLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabs"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
