@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/flagment_border_custom"
     tools:context=".viewClassFragment.reviewFragment">
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
         android:text="review" />
 </androidx.constraintlayout.widget.ConstraintLayout>

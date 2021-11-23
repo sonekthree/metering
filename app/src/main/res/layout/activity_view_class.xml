@@ -15,37 +15,137 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
-        <ImageView
+        <com.yinglan.shadowimageview.ShadowImageView
             android:id="@+id/class_img"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:background="@drawable/round_corner"
-            android:layout_marginTop="50dp"
-            android:layout_marginStart="40dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/test"
-            android:clipToOutline="true"
-            android:scaleType="centerCrop"
+            app:shadowSrc="@drawable/test"
+            app:shadowRound="20dp"
+            app:shadowColor="@color/black"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_class_img"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ellipse39"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/mint"
+            app:layout_constraintStart_toEndOf="@id/class_img"
+            app:layout_constraintTop_toTopOf="@id/class_img"
+            app:layout_constraintBottom_toBottomOf="@id/class_img"/>
+
+        <TextView
+            android:id="@+id/class_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="쉽게 배우는 웹툰"
+            android:textStyle="bold"
+            android:textColor="#597A8D"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintStart_toStartOf="@id/profile_class_img"
+            app:layout_constraintBottom_toTopOf="@id/profile_class_img"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/class_category_img"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ellipse39"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/mint"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@id/class_name"
+            app:layout_constraintTop_toTopOf="@id/class_name"
+            app:layout_constraintBottom_toBottomOf="@id/class_name"/>
+
+        <TextView
+            android:id="@+id/nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="마음만은 웹툰 작가"
+            android:textColor="@color/mint"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/profile_class_img"
+            app:layout_constraintTop_toTopOf="@id/profile_class_img"
+            app:layout_constraintBottom_toBottomOf="@id/profile_class_img"
             />
 
         <TextView
             android:id="@+id/class_cnt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:text="1010"
             android:textColor="@color/mint"
+            android:layout_marginTop="-30dp"
+            android:layout_marginStart="30dp"
             app:layout_constraintTop_toBottomOf="@id/class_img"
             app:layout_constraintStart_toStartOf="@id/class_img"
             />
+
+
+        <TextView
+            android:id="@+id/person_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="1/2"
+            android:textColor="@color/mint"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            app:layout_constraintBottom_toTopOf="@id/priceinfo"
+            app:layout_constraintEnd_toStartOf="@id/person_img"
+            />
+
+        <ImageView
+            android:id="@+id/person_img"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@drawable/person_xml"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintEnd_toEndOf="@id/priceinfo"
+            app:layout_constraintBottom_toTopOf="@id/priceinfo"/>
+
+        <TextView
+            android:id="@+id/cntinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="1회"
+            android:textColor="@color/mint"
+            android:layout_marginEnd="17dp"
+            app:layout_constraintTop_toTopOf="@id/class_cnt"
+            app:layout_constraintEnd_toStartOf="@id/priceinfo"
+            />
+
+        <TextView
+            android:id="@+id/priceinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:text="0원"
+            android:textStyle="bold"
+            android:textColor="#597A8D"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="7dp"
+            app:layout_constraintTop_toTopOf="@id/cntinfo"
+            app:layout_constraintBottom_toBottomOf="@id/cntinfo"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
 
         <TextView
             android:id="@+id/class_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:text="비대면"
             android:textColor="#7A7A7A"
             android:textStyle="bold"
@@ -102,8 +202,11 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="39dp"
         android:layout_marginTop="10dp"
+        app:tabTextAppearance="@style/tab_text"
+        app:tabBackground="@drawable/tap_selector"
+        app:tabIndicatorHeight="0dp"
         app:layout_constraintTop_toBottomOf="@id/class_detail">
 
         <com.google.android.material.tabs.TabItem

@@ -35,8 +35,11 @@ dependencies {
     //img crop and circl view
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.yinglan.shadowimageview:shadowimageview:1.0.4'
 
+    //taplayout
     implementation 'com.google.android.material:material:1.0.0-rc01'
+
 
     // firebase
     implementation platform('com.google.firebase:firebase-bom:29.0.0')
