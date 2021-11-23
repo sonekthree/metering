@@ -3,4 +3,11 @@
     <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
         <item name="colorAccent">@color/mint</item>
     </style>
+
+    <style name="tab_text" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/mint</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>

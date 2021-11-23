@@ -1,7 +1,6 @@
 package com.exam.metering;
 
 import android.os.Bundle;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -12,14 +11,14 @@ import com.exam.metering.viewClassFragment.scheduleFragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class viewClassActivity extends AppCompatActivity {
-    ImageView class_img;
+    com.yinglan.shadowimageview.ShadowImageView class_img;
     Fragment planfragment, schedulefragment, reviewfragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_class);
-        class_img = (ImageView) findViewById(R.id.class_img);
+        class_img = (com.yinglan.shadowimageview.ShadowImageView) findViewById(R.id.class_img);
         class_img.setClipToOutline(true);
 
         planfragment = new planFragment();
