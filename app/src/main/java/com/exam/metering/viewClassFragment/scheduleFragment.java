@@ -2,7 +2,6 @@ package com.exam.metering.viewClassFragment;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,27 +24,47 @@ import java.util.HashSet;
 
 
 public class scheduleFragment extends Fragment {
-
     MaterialCalendarView calendarView;
-//setOnDateChangedListener 날짜 선택 리스너
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_schedule, container, false);
-
+        HashSet<CalendarDay> eventdates = new HashSet<>();
         calendarView = view.findViewById(R.id.calendarView);
 
         //calendarView.setSelectionMode(MaterialCalendarView.SELECTION_MODE_NONE);
-
-        calendarView.setDateSelected(CalendarDay.from(2021, 11, 12), true);
+        //calendarView.setDateSelected(CalendarDay.from(2021, 11, 12), true);
         //calendarView.setDateSelected(CalendarDay.from(2021, 11, 15), true);
+
         calendarView.setDateSelected(CalendarDay.today(), false);
-        calendarView.addDecorator(new EventDecorator(Collections.singleton(CalendarDay.from(2021, 11, 15)),scheduleFragment.this));
-        calendarView.addDecorator(new EventDecorator(Collections.singleton(CalendarDay.from(2021, 11, 14)),scheduleFragment.this));
+
+        eventdates.add(CalendarDay.from(2021, 11, 15));
+        eventdates.add(CalendarDay.from(2021, 11, 14));
+
+        for(CalendarDay cal : eventdates){
+            calendarView.addDecorator(new EventDecorator(Collections.singleton(cal),scheduleFragment.this));
+        }
+
+
+//        calendarView.addDecorator(new EventDecorator(Collections.singleton(CalendarDay.from(2021, 11, 15)),scheduleFragment.this));
+//        calendarView.addDecorator(new EventDecorator(Collections.singleton(CalendarDay.from(2021, 11, 14)),scheduleFragment.this));
+
         calendarView.setOnDateChangedListener(new OnDateSelectedListener() {
             @Override
             public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
-                Log.d("HO", String.valueOf(selected));
+                Bundle bundle = new Bundle();
+                if(eventdates.contains(date)){
+                    bundle.putString("style", "비대면");
+                    bundle.putString("month", String.valueOf(date.getMonth()));
+                    bundle.putString("day", String.valueOf(date.getDay()));
+                    bundle.putString("time", "09:00:00~11:00:00");
+
+                    schedule_bottom_sheet bottomDialog = new schedule_bottom_sheet();
+                    bottomDialog.setArguments(bundle);
+                    bottomDialog.show(getFragmentManager(), "bottomsheet");
+                }
             }
 
 
@@ -55,9 +74,13 @@ public class scheduleFragment extends Fragment {
     }
 }
 
+
+
 class EventDecorator implements DayViewDecorator {
     private final HashSet<CalendarDay> dates;
     private final Drawable drawable;
+
+
     public EventDecorator(Collection<CalendarDay> dates, Fragment context) {
         drawable = context.getResources().getDrawable(R.drawable.ellipse39);
         this.dates = new HashSet<>(dates);
