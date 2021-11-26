@@ -21,4 +21,11 @@
         <item name="android:background">@drawable/bottom_dialog_custom</item>
     </style>
 
+    <style name="reviewRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/custom_rating</item>
+        <item name="android:minHeight">57dip</item>
+        <item name="android:maxHeight">57dip</item>
+        <item name="android:thumb">@null</item>
+    </style>
 </resources>
