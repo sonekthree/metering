@@ -19,12 +19,14 @@ public class myPage extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_my_page, container, false);
+
         Button btn = v.findViewById(R.id.proedit_btn);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(),viewClassActivity.class);
+                //Intent intent = new Intent(getContext(),viewClassActivity.class);
+                Intent intent = new Intent(getContext(),profileActivity.class);
                 startActivity(intent);
             }
         });
