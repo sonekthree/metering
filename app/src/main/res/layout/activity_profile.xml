@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profileActivity">
+
+    <ImageView
+        android:id="@+id/big_rect"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/profile_bing_rectangle"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/small_rect"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/profile_small_rectangle"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintTop_toTopOf="@id/big_rect"
+        app:layout_constraintBottom_toBottomOf="@id/big_rect"
+        app:layout_constraintStart_toStartOf="@id/big_rect"
+        app:layout_constraintEnd_toEndOf="@id/big_rect">
+    </ImageView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/my_profile_img"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/test"
+        app:civ_border_width="2dp"
+        android:elevation="20dp"
+        app:civ_border_color="@color/mint"
+        app:layout_constraintStart_toStartOf="@id/small_rect"
+        app:layout_constraintTop_toTopOf="@id/small_rect"
+        app:layout_constraintBottom_toBottomOf="@id/small_rect"/>
+
+
+    <TextView
+        android:id="@+id/my_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="서동주"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#597A8D"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="@id/my_profile_img"
+        app:layout_constraintBottom_toBottomOf="@id/my_profile_img"
+        app:layout_constraintStart_toEndOf="@id/my_profile_img"
+        />
+
+    <TextView
+        android:id="@+id/class_state_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="학력"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/mint"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/my_name"
+        app:layout_constraintTop_toBottomOf="@id/my_name"
+        />
+
+    <TextView
+        android:id="@+id/department_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="전공"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/mint"
+        app:layout_constraintStart_toStartOf="@id/class_state_text"
+        app:layout_constraintTop_toBottomOf="@id/class_state_text"
+        />
+
+    <TextView
+        android:id="@+id/my_class_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="대학 재학"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#7A7A7A"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/class_state_text"
+        app:layout_constraintTop_toTopOf="@id/class_state_text"
+        />
+
+    <TextView
+        android:id="@+id/my_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="컴퓨터 공학"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#7A7A7A"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/department_text"
+        app:layout_constraintTop_toTopOf="@id/department_text"
+        />
+
+
+
+
+    <TextView
+        android:id="@+id/intro_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="한줄 소개"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="13dp"
+        app:layout_constraintTop_toBottomOf="@id/small_rect"
+        app:layout_constraintStart_toStartOf="@id/small_rect"
+        />
+
+    <TextView
+        android:id="@+id/intro_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="안녕하세요"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/intro_text"
+        app:layout_constraintStart_toStartOf="@id/intro_text"
+        />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/big_rect">
+
+        <ImageView
+            android:id="@+id/polygon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_polygon_3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_avg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="평균 별점"
+            android:textSize="20sp"
+            android:textColor="#597A8D"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintStart_toEndOf="@id/polygon"
+            app:layout_constraintTop_toTopOf="@id/polygon"
+            app:layout_constraintBottom_toBottomOf="@id/polygon"/>
+
+
+        <ImageView
+            android:id="@+id/star"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_star_1"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@id/tv_avg"
+            app:layout_constraintTop_toTopOf="@id/tv_avg"
+            app:layout_constraintBottom_toBottomOf="@id/tv_avg"/>
+
+        <TextView
+            android:id="@+id/avg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textSize="20sp"
+            android:textColor="#597A8D"
+            android:textStyle="bold"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@id/star"
+            app:layout_constraintTop_toTopOf="@id/star"
+            app:layout_constraintBottom_toBottomOf="@id/star"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/main_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/polygon"
+            app:layout_constraintStart_toStartOf="@id/polygon">
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

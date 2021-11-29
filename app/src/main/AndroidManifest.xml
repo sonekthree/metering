@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Metering">
+        <activity android:name=".profileActivity"></activity>
         <activity android:name=".viewClassActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".profileEditActivity" />
