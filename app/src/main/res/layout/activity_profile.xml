@@ -157,6 +157,7 @@
             android:id="@+id/polygon"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/ic_polygon_3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -197,6 +198,18 @@
             app:layout_constraintStart_toEndOf="@id/star"
             app:layout_constraintTop_toTopOf="@id/star"
             app:layout_constraintBottom_toBottomOf="@id/star"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tag_rv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toTopOf="@id/avg"
+            app:layout_constraintBottom_toBottomOf="@id/avg"
+            app:layout_constraintStart_toEndOf="@id/avg"
+            app:layout_constraintEnd_toEndOf="parent">
+        </androidx.recyclerview.widget.RecyclerView>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/main_rv"

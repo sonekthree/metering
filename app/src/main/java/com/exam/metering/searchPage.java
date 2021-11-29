@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
@@ -26,6 +27,9 @@ public class searchPage extends Fragment{
     ArrayAdapter<String> arrayAdapter;
     private Spinner spinner;
     Button btn;
+
+    ActionBar actionBar;
+    private View mViewGroup;
     @Nullable
     @Override
     public View onCreateView(@Nullable LayoutInflater inflater, @Nullable ViewGroup container,
@@ -33,6 +37,13 @@ public class searchPage extends Fragment{
         // Inflate the layout for this fragment
         ViewGroup v = (ViewGroup) inflater.inflate(R.layout.fragment_search_page, container, false);
         context = container.getContext();
+
+        actionBar = ((MainActivity) getActivity()).getSupportActionBar();
+        actionBar.hide();
+
+        mViewGroup = v.findViewById(R.id.search_detail);
+        mViewGroup.setVisibility(View.GONE);
+
         Button start_btn = v.findViewById(R.id.startDate_btn);
 
         start_btn.setOnClickListener(new View.OnClickListener() {
@@ -90,5 +101,17 @@ public class searchPage extends Fragment{
             btn = view.findViewById(R.id.endDate_btn);
             btn.setText(dateMessage);
         }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        actionBar.show();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        actionBar.hide();
     }
 }

@@ -31,6 +31,13 @@
         app:layout_constraintVertical_chainStyle="packed"
         />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/search_title"
+        app:layout_constraintEnd_toEndOf="@id/search_title"
+        app:layout_constraintTop_toBottomOf="@id/search_title">
 
     <ImageView
         android:id="@+id/dateimg"
@@ -38,8 +45,8 @@
         android:layout_height="50dp"
         android:src="@drawable/edit_text_shape"
         android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@+id/search_title"
-        app:layout_constraintTop_toBottomOf="@+id/search_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
 
     />
@@ -62,10 +69,10 @@
         android:layout_height="wrap_content"
         android:text="강의 시작일"
         android:textSize="14sp"
-        android:layout_marginTop="21dp"
         android:background="#00ff0000"
         app:layout_constraintStart_toEndOf="@+id/startcal"
-        app:layout_constraintTop_toBottomOf="@+id/search_title"
+        app:layout_constraintTop_toTopOf="@+id/startcal"
+        app:layout_constraintBottom_toBottomOf="@+id/startcal"
         app:layout_constraintVertical_chainStyle="packed"
         />
 
@@ -100,10 +107,10 @@
         android:layout_height="wrap_content"
         android:text="강의 종료일"
         android:textSize="14sp"
-        android:layout_marginTop="21dp"
         android:background="#00ff0000"
         app:layout_constraintStart_toEndOf="@+id/endcal"
-        app:layout_constraintTop_toBottomOf="@+id/search_title"
+        app:layout_constraintTop_toTopOf="@+id/startcal"
+        app:layout_constraintBottom_toBottomOf="@+id/startcal"
         app:layout_constraintVertical_chainStyle="packed"/>
 
     <Spinner
@@ -116,9 +123,9 @@
         android:padding="8dp"
         android:gravity="center"
         android:textAlignment="center"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="@id/search_title"
-        app:layout_constraintTop_toBottomOf="@id/search_title"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/startcal"
+        app:layout_constraintBottom_toBottomOf="@+id/startcal"/>
 
     <ImageView
         android:id="@+id/priceimg"
@@ -126,7 +133,7 @@
         android:layout_height="50dp"
         android:src="@drawable/edit_text_shape"
         android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@+id/search_title"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dateimg"
         app:layout_constraintVertical_chainStyle="packed"
 
@@ -229,7 +236,7 @@
         android:paddingVertical="10dp"
         android:textColor="@color/mint"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@id/search_title"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/spinner_met"
         app:layout_constraintVertical_chainStyle="packed"
         />
@@ -246,6 +253,8 @@
         app:layout_constraintEnd_toEndOf="@id/lecCount_edit"
         app:layout_constraintTop_toBottomOf="@+id/lecCount_edit" />
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <TextView
         android:id="@+id/search_result_str"
         android:layout_width="wrap_content"
@@ -254,19 +263,19 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="#096975"
-        app:layout_constraintTop_toBottomOf="@+id/search_btn"
-        app:layout_constraintStart_toStartOf="@id/priceimg"
+        app:layout_constraintTop_toBottomOf="@+id/search_detail"
+        app:layout_constraintStart_toStartOf="@id/search_title"
 
         />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mRecyclerView"
         android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_result_str" />
+        app:layout_constraintStart_toStartOf="@id/search_result_str"
+        app:layout_constraintTop_toBottomOf="@+id/search_detail" />
 
 
 

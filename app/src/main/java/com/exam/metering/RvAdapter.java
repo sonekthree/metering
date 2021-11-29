@@ -26,7 +26,11 @@ public class RvAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         if(type == 0){
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.review_item, parent, false);
             return new ViewHolderReview(view);
+        }else if(type == 1){
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.tag_item, parent, false);
+            return new ViewHolderProfileTag(view);
         }
+
         return null;
     }
 
@@ -35,6 +39,8 @@ public class RvAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         if(holder instanceof ViewHolderReview){
             ((ViewHolderReview)holder).onBind(listData.get(position));
+        }else if(holder instanceof ViewHolderProfileTag){
+            ((ViewHolderProfileTag)holder).onBind(listData.get(position));
         }
     }
 
