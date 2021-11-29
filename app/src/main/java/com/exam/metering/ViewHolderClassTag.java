@@ -8,10 +8,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.exam.metering.viewClassFragment.Review_info_item;
 
-public class ViewHolderProfileTag extends RecyclerView.ViewHolder{
+public class ViewHolderClassTag extends RecyclerView.ViewHolder{
     TextView tag;
-
-    public ViewHolderProfileTag(@NonNull View itemView) {
+    public ViewHolderClassTag(@NonNull View itemView) {
         super(itemView);
         tag = itemView.findViewById(R.id.profile_tag);
     }

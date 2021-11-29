@@ -52,10 +52,10 @@ public class profileActivity extends AppCompatActivity {
         rv2.setLayoutManager(llm2);
 
         adapter2 = new RvAdapter(1);
-        adapter2.addItem(new Review_info_item("성실함"));
-        adapter2.addItem(new Review_info_item("성실함2"));
-        adapter2.addItem(new Review_info_item("성실함3"));
-        adapter2.addItem(new Review_info_item("성실함4"));
+        adapter2.addItem(new Review_info_item("#성실함"));
+        adapter2.addItem(new Review_info_item("#성실함2"));
+        adapter2.addItem(new Review_info_item("#성실함3"));
+        adapter2.addItem(new Review_info_item("#성실함4"));
         rv2.setAdapter(adapter2);
     }
 }

@@ -25,7 +25,7 @@ public class myPage extends Fragment {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(),profileActivity.class);
+                Intent intent = new Intent(getContext(),viewClassActivity.class);
                 //Intent intent = new Intent(getContext(),profileEditActivity.class);
                 startActivity(intent);
             }

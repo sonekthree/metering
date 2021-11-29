@@ -2,16 +2,16 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:paddingHorizontal="5dp"
+    android:paddingEnd="5dp"
     android:paddingVertical="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
-        android:id="@+id/profie_tag"
+        android:id="@+id/profile_tag"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/profile_tag_img"
-        android:text="#"
+        android:text=""
         android:textSize="12sp"
         android:textColor="@color/white"
         android:paddingHorizontal="20dp"
