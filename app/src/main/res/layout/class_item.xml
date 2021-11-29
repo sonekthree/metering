@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/deviceList1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+
+        <ImageView
+            android:id="@+id/class_image"
+
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/round_corner"
+            android:scaleType="fitXY"
+            android:src="@drawable/test"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/class_image"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/class_image"
+            android:text="비대면"
+            android:textColor="@color/lighttxt"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/class_image"
+            app:layout_constraintTop_toTopOf="@+id/class_image" />
+
+        <TextView
+            android:id="@+id/txt_classname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="C언어 문법 "
+            android:textColor="@color/boldtxt"
+            android:layout_marginTop="3dp"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/class_image"
+            app:layout_constraintTop_toBottomOf="@+id/txt_online" />
+
+
+        <ImageView
+            android:id="@+id/person_img"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_alignParentEnd="true"
+
+            android:src="@drawable/person_xml"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txt_online" />
+
+        <TextView
+            android:id="@+id/txt_curnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_toStartOf="@+id/txt_slash"
+            android:textColor="@color/lighttxt"
+            android:text="1"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/txt_slash"
+            app:layout_constraintTop_toTopOf="@id/txt_allnum" />
+
+        <TextView
+            android:id="@+id/txt_slash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/person_img"
+            android:layout_marginEnd="2dp"
+            android:layout_toStartOf="@+id/txt_allnum"
+            android:textColor="@color/lighttxt"
+            android:text="/"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/txt_allnum"
+            app:layout_constraintTop_toTopOf="@id/txt_allnum" />
+
+        <TextView
+            android:id="@+id/txt_allnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/lighttxt"
+            android:text="3"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/person_img"
+            app:layout_constraintTop_toBottomOf="@+id/person_img" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mini_profile_img"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@drawable/mini_profile_img"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_username"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/txt_classname"
+            app:layout_constraintTop_toTopOf="@+id/txt_username"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/txt_username"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="binary는 호남선 "
+            android:textColor="@color/boldtxt"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toTopOf="@id/txt_week"
+            app:layout_constraintStart_toEndOf="@id/mini_profile_img" />
+
+        <TextView
+            android:id="@+id/txt_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/class_image"
+            android:textColor="@color/lighttxt"
+            android:text="주"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/class_image"
+            app:layout_constraintEnd_toStartOf="@id/txt_weekcount"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/txt_classname" />
+
+        <TextView
+            android:id="@+id/txt_weekcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/txt_week"
+            android:textColor="@color/lighttxt"
+            android:text="2"
+            android:textSize="10dp"
+            android:layout_marginStart="3dp"
+            app:layout_constraintStart_toEndOf="@+id/txt_week"
+            app:layout_constraintTop_toTopOf="@+id/txt_week"
+            tools:layout_editor_absoluteY="50dp" />
+
+        <TextView
+            android:id="@+id/txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/txt_weekcount"
+            android:textColor="@color/lighttxt"
+
+            android:text="회"
+            android:textSize="10dp"
+
+            app:layout_constraintStart_toEndOf="@+id/txt_weekcount"
+            app:layout_constraintTop_toTopOf="@+id/txt_weekcount"
+            tools:layout_editor_absoluteY="53dp" />
+
+        <TextView
+            android:id="@+id/txt_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="1"
+            android:textColor="@color/lighttxt"
+            android:textSize="10dp"
+            app:layout_constraintStart_toEndOf="@+id/txt_time"
+            app:layout_constraintTop_toTopOf="@+id/txt_time"
+            tools:layout_editor_absoluteY="64dp" />
+
+        <TextView
+            android:id="@+id/txt_hourtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/txt_hour"
+            android:textColor="@color/lighttxt"
+            android:text="시간"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/txt_final"
+            app:layout_constraintStart_toEndOf="@+id/txt_hour"
+            app:layout_constraintTop_toTopOf="@+id/txt_hour"
+            tools:layout_editor_absoluteY="53dp" />
+
+
+        <TextView
+            android:id="@+id/txt_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/txt_hourtime"
+            android:text="총"
+            android:textColor="@color/lighttxt"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/txt_allcount"
+            app:layout_constraintStart_toEndOf="@id/txt_hourtime"
+            app:layout_constraintTop_toTopOf="@+id/txt_hourtime" />
+
+        <TextView
+            android:id="@+id/txt_allcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:textColor="@color/lighttxt"
+            android:text="36"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/txt_alltime"
+            app:layout_constraintStart_toEndOf="@+id/txt_final"
+            app:layout_constraintTop_toTopOf="@+id/txt_final" />
+
+        <TextView
+            android:id="@+id/txt_alltime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_toEndOf="@+id/txt_allcount"
+            android:textColor="@color/lighttxt"
+            android:text="회"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/txt_price"
+            app:layout_constraintTop_toTopOf="@id/txt_allcount"
+            tools:layout_editor_absoluteY="71dp" />
+
+
+        <TextView
+            android:id="@+id/txt_onecount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1회"
+            android:textSize="10dp"
+            android:textColor="@color/lighttxt"
+            android:layout_marginBottom="3dp"
+            app:layout_constraintBottom_toTopOf="@id/txt_price"
+            app:layout_constraintEnd_toEndOf="@id/txt_price"/>
+
+
+        <TextView
+            android:id="@+id/txt_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:textStyle="bold"
+            android:text="12000원"
+            android:textSize="15dp"
+            android:textColor="@color/boldtxt"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_alltime"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

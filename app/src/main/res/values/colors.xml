@@ -8,4 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="mint">#FF86AFC8</color>
+    <color name="boldtxt">#FF597A8D</color>
+    <color name="lighttxt">#FF86AFC8</color>
 </resources>

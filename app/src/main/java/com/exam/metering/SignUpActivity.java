@@ -63,7 +63,7 @@ public class SignUpActivity extends AppCompatActivity {
         radioGroup = (RadioGroup)findViewById(R.id.radioGroup);
         mAuth = FirebaseAuth.getInstance();
         initSignUp();
-        onRadioButtonClicked(radioGroup);
+        //onRadioButtonClicked(radioGroup);
          arrayAdapter = new ArrayAdapter<>(this,
                 R.layout.lec_met_text, arr);
         spinner_email.setAdapter(arrayAdapter);
@@ -85,22 +85,22 @@ public class SignUpActivity extends AppCompatActivity {
 
     }
 
-    public void onRadioButtonClicked(View view){
-        boolean checked = ((RadioButton) view).isChecked();
+//    public void onRadioButtonClicked(View view){
+//        boolean checked = ((RadioButton) view).isChecked();
+//
+//        switch (view.getId()){
+//            case R.id.radio_m:
+//                if (checked){
+//                    // 남자구나
+//                }
+//            case R.id.radio_w:
+//                if(checked){
+//                    //여자구나
+//                }
+//        }
 
-        switch (view.getId()){
-            case R.id.radio_m:
-                if (checked){
-                    // 남자구나
-                }
-            case R.id.radio_w:
-                if(checked){
-                    //여자구나
-                }
-        }
 
-
-    }
+//    }
 
     public void updateUI(FirebaseUser user){
         if(user.toString().isEmpty()){
