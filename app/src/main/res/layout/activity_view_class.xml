@@ -28,6 +28,17 @@
             app:shadowColor="@color/black"
             />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/class_tag_rv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toTopOf="@id/class_img"
+            app:layout_constraintStart_toEndOf="@id/class_img"
+            app:layout_constraintEnd_toEndOf="@id/class_category_img">
+        </androidx.recyclerview.widget.RecyclerView>
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_class_img"
             android:layout_width="15dp"
