@@ -53,85 +53,161 @@
         android:layout_weight="10"
         android:layout_margin="20dp"
         android:orientation="vertical">
+
         <TextView
-            android:layout_weight="2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:textStyle="bold"
+            android:layout_marginLeft="20sp"
+            android:layout_weight="2"
+            android:text="카테고리"
+            android:textColor="#597A8D"
             android:textSize="20sp"
-            android:text="클래스 카테고리" />
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="16"
             android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="16"
+                android:layout_weight="9"
                 android:orientation="horizontal">
+
                 <ImageButton
                     android:id="@+id/nature_button"
-                    android:layout_gravity="top"
                     android:layout_width="50sp"
                     android:layout_height="100sp"
-                    android:background="@drawable/ic_baseline_home_24"
+                    android:layout_gravity="top"
                     android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/category_science"
                     android:text="nature" />
 
                 <ImageButton
                     android:id="@+id/social_button"
-                    android:layout_gravity="top"
                     android:layout_width="50sp"
                     android:layout_height="100sp"
-                    android:background="@drawable/ic_baseline_home_24"
+                    android:layout_gravity="top"
                     android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/category_social"
                     android:text="social" />
+
                 <ImageButton
                     android:id="@+id/art_button"
-                    android:layout_gravity="top"
                     android:layout_width="50sp"
                     android:layout_height="100sp"
-                    android:background="@drawable/ic_baseline_home_24"
+                    android:layout_gravity="top"
                     android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/category_art"
                     android:text="art" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="자연과학"
+                    android:textAlignment="center"
+                    android:textColor="#597A8D" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="사회과학"
+                    android:textAlignment="center"
+                    android:textColor="#597A8D" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="예체능"
+                    android:textAlignment="center"
+                    android:textColor="#597A8D" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="16"
+                android:layout_weight="9"
                 android:orientation="horizontal">
-                <ImageButton
-                    android:id="@+id/lan_button"
-                    android:layout_gravity="top"
-                    android:layout_width="50sp"
-                    android:layout_height="100sp"
-                    android:layout_weight="1"
-                    android:background="@drawable/ic_baseline_home_24"
-                    android:text="lan" />
-                <ImageButton
-                    android:id="@+id/button"
-                    android:layout_gravity="top"
-                    android:layout_width="50sp"
-                    android:layout_height="100sp"
-                    android:layout_weight="1"
-                    android:background="@drawable/ic_baseline_home_24"
-                    android:text="View 1" />
+
                 <ImageButton
                     android:id="@+id/engine_button"
 
                     android:layout_width="50sp"
                     android:layout_height="100sp"
                     android:layout_weight="1"
-                    android:background="@drawable/ic_baseline_home_24"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/category_engineering"
                     android:text="Engine" />
+
+                <ImageButton
+                    android:id="@+id/lan_button"
+                    android:layout_width="50sp"
+                    android:layout_height="100sp"
+                    android:layout_gravity="top"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/category_language"
+                    android:text="lan" />
+
+                <ImageButton
+                    android:id="@+id/button"
+                    android:layout_width="50sp"
+                    android:layout_height="100sp"
+                    android:layout_gravity="top"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:text="View 1" />
+
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="공학"
+                    android:textAlignment="center"
+                    android:textColor="#597A8D" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="예술"
+                    android:textAlignment="center"
+                    android:textColor="#597A8D" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>
-
 
 
 </LinearLayout>
