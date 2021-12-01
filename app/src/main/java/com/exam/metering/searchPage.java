@@ -41,8 +41,9 @@ public class searchPage extends Fragment{
         actionBar = ((MainActivity) getActivity()).getSupportActionBar();
         actionBar.hide();
 
-        mViewGroup = v.findViewById(R.id.search_detail);
-        mViewGroup.setVisibility(View.GONE);
+        //검색 필터 숨기기
+//        mViewGroup = v.findViewById(R.id.search_detail);
+//        mViewGroup.setVisibility(View.GONE);
 
         Button start_btn = v.findViewById(R.id.startDate_btn);
 
