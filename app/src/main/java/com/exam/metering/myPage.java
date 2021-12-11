@@ -21,12 +21,21 @@ public class myPage extends Fragment {
         View v = inflater.inflate(R.layout.fragment_my_page, container, false);
 
         Button btn = v.findViewById(R.id.proedit_btn);
+        Button create_btn = v.findViewById(R.id.notice_btn);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(),viewClassActivity.class);
                 //Intent intent = new Intent(getContext(),profileEditActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        create_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(),CreateClassActivity.class);
                 startActivity(intent);
             }
         });
