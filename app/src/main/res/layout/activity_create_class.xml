@@ -7,11 +7,11 @@
     tools:context=".CreateClassActivity">
 
     <Button
-        android:id="@+id/next_buttom"
+        android:id="@+id/next_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/mint"
-        android:text="완료"
+        android:text="다음 단계로"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,7 +22,7 @@
         android:id="@+id/class_frame"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/next_buttom"
+        app:layout_constraintBottom_toTopOf="@+id/next_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
