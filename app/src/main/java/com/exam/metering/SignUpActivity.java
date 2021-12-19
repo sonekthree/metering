@@ -85,19 +85,25 @@ public class SignUpActivity extends AppCompatActivity {
 
     }
 
-//    public void onRadioButtonClicked(View view){
-//        boolean checked = ((RadioButton) view).isChecked();
-//
-//        switch (view.getId()){
-//            case R.id.radio_m:
-//                if (checked){
-//                    // 남자구나
-//                }
-//            case R.id.radio_w:
-//                if(checked){
-//                    //여자구나
-//                }
-//        }
+    public void onRadioButtonClicked(View view){
+        boolean checked = ((RadioButton) view).isChecked();
+
+        switch (view.getId()) {
+            case R.id.radio_m:
+                if (checked) {
+                    // 남자구나
+                    break;
+                }
+            case R.id.radio_w:
+                if (checked) {
+
+
+                    //여자구나
+                    break;
+
+                }
+             }
+        }
 
 
 //    }
