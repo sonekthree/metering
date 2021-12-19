@@ -14,6 +14,7 @@ public class CreateClassActivity extends AppCompatActivity {
     Button nxt_btn;
     Fragment detail;
     Fragment schedule;
+    Fragment regsumm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
