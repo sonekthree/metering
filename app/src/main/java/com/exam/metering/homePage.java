@@ -71,7 +71,7 @@ public class homePage extends Fragment {
 
 
         ArrayList<DataPage> list = new ArrayList<>();
-        list.add(new DataPage(android.R.color.black,"1 Page"));
+        list.add(new DataPage(R.drawable.home_page_first,"1 Page"));
         list.add(new DataPage(android.R.color.holo_red_light, "2 Page"));
         list.add(new DataPage(android.R.color.holo_green_dark, "3 Page"));
         list.add(new DataPage(android.R.color.holo_orange_dark, "4 Page"));

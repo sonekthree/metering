@@ -1,215 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".matchPage">
 
-    <RelativeLayout
-        android:id="@+id/deviceList1"
+    <TextView
+        android:id="@+id/texts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:elevation="10dp"
-        android:orientation="vertical"
-        android:padding="25dp">
-
-        <ImageView
-            android:id="@+id/class_image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_alignParentStart="true"
-            android:src="@drawable/test"
-            android:background="@drawable/round_corner"
-            android:scaleType="fitXY"
-            />
-
-<!--        <com.yinglan.shadowimageview.ShadowImageView-->
-<!--            android:id="@+id/class_image"-->
-<!--            android:layout_width="150dp"-->
-<!--            android:layout_height="150dp"-->
-<!--            android:layout_alignParentStart="true"-->
-<!--            android:scaleType="fitCenter"-->
-<!--            app:shadowSrc="@drawable/test"-->
-<!--            app:shadowRound="20dp"-->
-<!--            app:shadowColor="@color/black"-->
-<!--            />-->
-        <TextView
-            android:id="@+id/txt_classname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/class_image"
-            android:layout_marginTop="12dp"
-            android:layout_marginStart="20dp"
-            android:text="C언어 문법 "
-            android:textColor="@color/black"
-            android:textFontWeight="1000"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/txt_curnum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="12dp"
-
-            android:layout_toEndOf="@id/txt_classname"
-            android:text="1"
-            android:textSize="15dp" />
-
-        <TextView
-            android:id="@+id/txt_slash"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-
-            android:layout_marginTop="12dp"
-            android:layout_toEndOf="@id/txt_curnum"
-            android:text="명 /"
-            android:textSize="15dp" />
-
-        <TextView
-            android:id="@+id/txt_allnum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="12dp"
-            android:layout_toEndOf="@id/txt_slash"
-            android:text="3"
-            android:textSize="15dp" />
-
-        <TextView
-            android:id="@+id/txt_slashs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="12dp"
-            android:layout_toEndOf="@id/txt_allnum"
-            android:text="명"
-            android:textSize="15dp" />
+        android:text="태그 설정하기"
+        android:textSize="20sp" />
 
 
-        <TextView
-            android:id="@+id/txt_username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_classname"
-            android:layout_marginTop="10dp"
-
-            android:layout_toEndOf="@+id/class_image"
-            android:layout_marginStart="20dp"
-            android:text="binarys는 호남선 "
-            android:textSize="15dp" />
-
-        <TextView
-            android:id="@+id/txt_online"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_classname"
-            android:layout_marginStart="21dp"
-            android:layout_marginTop="14dp"
-            android:layout_toEndOf="@+id/txt_username"
-            android:text="비대면"
-            android:textSize="12dp" />
-
-        <TextView
-            android:id="@+id/txt_week"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_username"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_toEndOf="@+id/class_image"
-            android:text="주"
-            android:textSize="10dp" />
-
-        <TextView
-            android:id="@+id/txt_weekcount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_username"
-            android:layout_marginTop="10dp"
-            android:layout_toEndOf="@+id/txt_week"
-            android:text="1"
-            android:textSize="10dp" />
-
-        <TextView
-            android:id="@+id/txt_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_username"
-            android:layout_marginTop="10dp"
-            android:layout_toEndOf="@+id/txt_weekcount"
-            android:text="회"
-            android:textSize="10dp" />
-
-        <TextView
-            android:id="@+id/txt_hour"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_username"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="10dp"
-            android:layout_toEndOf="@+id/txt_time"
-            android:text="1"
-            android:textSize="10dp" />
-
-        <TextView
-            android:id="@+id/txt_hourtime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_username"
-            android:layout_marginTop="10dp"
-            android:layout_toEndOf="@+id/txt_hour"
-            android:text="시간"
-            android:textSize="10dp" />
-
-        <TextView
-            android:id="@+id/txt_final"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_username"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="10dp"
-            android:layout_toEndOf="@+id/txt_hourtime"
-            android:text="총"
-            android:textSize="10dp" />
-
-        <TextView
-            android:id="@+id/txt_allcount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_username"
-            android:layout_marginTop="10dp"
-            android:layout_toEndOf="@+id/txt_final"
-            android:text="16"
-            android:textSize="10dp" />
-
-        <TextView
-            android:id="@+id/txt_alltime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_username"
-            android:layout_marginTop="10dp"
-            android:layout_toEndOf="@+id/txt_allcount"
-            android:text="회"
-            android:textSize="10dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <TextView
-            android:id="@+id/txt_count"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_online"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="6dp"
-            android:text="1회 12000원"
-            android:textSize="15dp" />
-
-    </RelativeLayout>
-
-</LinearLayout>
